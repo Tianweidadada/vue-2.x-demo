@@ -43,6 +43,8 @@ export default {
         if (valid) {
           // this.$router.push('/main')
           // 登录成功后,把用户名传递到 Main 组件
+          sessionStorage.setItem('isLogin','true');
+          this.$store.dispatch("asyncUpdateUser", {name:this.form.name});
           this.$router.push({name:'Main',params:{name:this.form.name}})
         } else {
           this.$message({

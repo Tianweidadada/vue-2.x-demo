@@ -54,7 +54,8 @@
              <el-dropdown-item>登出</el-dropdown-item>
            </el-dropdown-menu>
          </el-dropdown>
-         <span>{{$route.params.name}}</span>
+         <span>{{$store.getters.getUser.name}}</span>
+<!--         <span>{{// $route.params.name}}</span>-->
        </el-header>
 
        <el-main>
